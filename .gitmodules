@@ -1,0 +1,3 @@
+[submodule "abnfgen"]
+	path = abnfgen
+	url = https://github.com/Viruliant/abnfgen.git
