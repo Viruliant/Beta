@@ -1,0 +1,28 @@
+;_________________________________________________________________________λ ABNF
+<Expression> = <Abstraction>
+             / <Application>
+             / <Encapsulation>
+             / <Variable>
+<Abstraction> = λ <variable> . <Expression>
+<Application> = <Expression> <Expression>
+<Encapsulation> = (<Expression>)
+<variable> = <EscapableChars>
+           / any other chars besides 
+<EscapableChars> = \.
+                 / \(
+                 / \λ
+                 / \ 
+                 / \n
+                 / \t
+                 / \\
+<InescapableChars> = .
+                   / (
+                   / λ
+                   /  
+                   / n
+                   / t
+                   / \
+<WSP> = 
+      / 
+      / 
+
